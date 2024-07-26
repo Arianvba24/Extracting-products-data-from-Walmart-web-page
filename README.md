@@ -27,3 +27,23 @@ We have two options:
 We choose the **second option**:
 
 You can see how we don't use Selenium or Playwright to extract the data:
+
+
+
+https://github.com/user-attachments/assets/dc82e703-179a-42db-a5d5-b2fd45afa821
+
+
+
+https://github.com/user-attachments/assets/8cd55b25-2480-43f2-8872-614d5e0b3d89
+
+
+
+
+https://github.com/user-attachments/assets/816a605b-26e1-492f-aa46-82c646403314
+
+
+
+
+
+
+

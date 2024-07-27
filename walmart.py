@@ -378,6 +378,21 @@ class Spider_functions():
 
         return dfx
         
+    def from_dataframe_to_data(self,df,extension,adress):
+        self.extension = extension
+        self.df = df
+        self.adress = adress
+        if self.extension == "csv":
+            return self.df.to_csv(self.adress,index = False)
+        elif self.extension == "xlsx":
+            return self.df.to_excel(self.adress,index = False)
+        elif self.extension == "sql":
+            return self.df.to_sql(self.adress,index = False)
+        elif self.extension == "json":
+            return self.df.to_json(self.adress,index = False)
+        elif self.extension == "parquet":
+            return self.df.to_parquet(self.adress,index = False)
+        
     
 
 
@@ -387,3 +402,4 @@ if __name__=="__main__":
     df=spider.regex_javascript_single_data(url = r"https://www.walmart.com/browse/electronics/shop-tvs-by-size/3944_1060825_2489948?povid=ETS_TAVC_TVCP_Itemcarousel__hotandtrending&affinityOverride=default")
     df_2 = spider.regex_javascript_multiple_data(df = df,urls_amount = 25)
     print(df_2)
+    spider.from_dataframe_to_data(df=df,extension="xlsx",adress=r"C:\Users\Cash\Proyectos\Web Scrapping\Walmart\output.xlsx")
